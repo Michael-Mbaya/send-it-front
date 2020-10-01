@@ -14,7 +14,7 @@ import {DeliveryApiService} from '../delivery-api.service'
 
 export class DeliveryComponent implements OnInit {
 
-  title = "Deliveries Call"
+  title = "Deliveries"
   delivery:Deliveries
 
 
