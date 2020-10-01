@@ -1,0 +1,8 @@
+.home-pg {
+    background-image: url('/assets/homepg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center center;
+    background-color: rgb(0, 0, 0);
+    height: 680px;
+}

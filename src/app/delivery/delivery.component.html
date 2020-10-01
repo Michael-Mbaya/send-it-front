@@ -1,1 +1,15 @@
-<p class="my-2 font-weight-bolder">delivery works!</p>
+<div class="container-fluid">
+    <div class="home-pg">
+        <h1 class="text-white">{{ title }}</h1>
+        <div class="row">
+            <div class="col-md-6" *ngFor="let deliver of delivery">
+                <h1>heloo there</h1>
+                <h1>{{ deliver.id }}</h1>
+                <h1>{{ deliver.item }}</h1>
+                <h1>{{ deliver.quantity }}</h1>
+                <h1>{{ deliver.price }}</h1>
+                <h1>{{ deliver.destination }}</h1>
+            </div>
+        </div>
+    </div>
+</div>

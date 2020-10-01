@@ -1,30 +1,28 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Deliveries } from './deliveries'
-
+import { Users } from './users'
 
 @Injectable({
   providedIn: 'root'
 })
+export class UserApiService {
 
-export class DeliveryApiService {
- 
-  delivery: Deliveries
+  users: Users
 
   constructor(public http:HttpClient) { 
-    this.delivery = new Deliveries(0,'',0,0,'');
+    this.users = new Users(0,"","",0);
   }
 
   searchUsers(){
     
     interface ApiResponse {
     id:number;
-    item:string;
-    quantity: number;
-    price:number;
-    destination:String;
+    name:String;
+    address:String;
+    phone_number:number;
     } 
-    let searchPoint = "https://sendit-shembaya-api.herokuapp.com/deliveries"
+
+    let searchPoint = "https://sendit-shembaya-api.herokuapp.com/users"
 
     console.log("xxxxxxxxxxxxxxxxxxxxxxxxx")
     let promise = new Promise((resolve, reject) => {
@@ -34,7 +32,7 @@ export class DeliveryApiService {
           console.log("rrrrrrrrrrrrr")
           console.log(results);
           console.log("rrrrrrrrrrrrr")
-          this.delivery = results;
+          this.users = results;
        
 
           resolve();
@@ -47,6 +45,5 @@ export class DeliveryApiService {
     });
     return promise;
   }
-
 
 }

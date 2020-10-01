@@ -1,38 +1,44 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { observable } from 'rxjs';
+import { Deliveries } from '../deliveries'
+import {DeliveryApiService} from '../delivery-api.service'
 
 @Component({
   selector: 'app-delivery',
   templateUrl: './delivery.component.html',
-  styleUrls: ['./delivery.component.css']
+  styleUrls: ['./delivery.component.css'],
+  providers:[DeliveryApiService]
 })
 
 
-// export class Delivery {
-//   constructor(
-//     public id:number,
-//     public item:string,
-//     public quantity:number,
-//     public price:number,
-//     public destination:string
-//   ) {
-    
-//   }
-// }
-
 export class DeliveryComponent implements OnInit {
 
+  title = "Deliveries Call"
+  delivery:Deliveries
 
 
-  constructor(
+  constructor(private api:DeliveryApiService) { }
 
-  ) { }
+  searchUser(){
+    this.api.searchUsers().then(
+      (success)=>{
+        this.delivery=this.api.delivery;
+        console.log(this.delivery);
+      },
+      (error)=>{
+        console.log(error)
+      }
+    )
+    
 
-  ngOnInit(): void {
- 
   }
 
+  ngOnInit(): void {
+    
+    this.searchUser()
+
+  }
   
 
 

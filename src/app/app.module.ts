@@ -13,6 +13,9 @@ import { DeliveryComponent } from './delivery/delivery.component';
 import { from } from 'rxjs';
 import { HomeComponent } from './home/home.component';
 import { DeliveryApiService } from './delivery-api.service';
+import { UserApiService } from './user-api.service';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +27,15 @@ import { DeliveryApiService } from './delivery-api.service';
     AboutUsComponent,
     DeliveryComponent,
     HomeComponent,
+    LandingPageComponent,
+    UserComponent,
   ],
   imports: [
    BrowserModule,
    HttpClientModule,
    AppRoutingModule
   ],
-  providers: [DeliveryApiService],
+  providers: [DeliveryApiService,UserApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

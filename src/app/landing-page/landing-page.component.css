@@ -1,0 +1,17 @@
+.main-pg {
+    background-image: url('/assets/main1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center center;
+    background-color: rgb(0, 0, 0);
+    height: 680px;
+}
+
+.go-btn {
+    margin-left: 45%;
+}
+
+.content {
+    padding: 180px 50px 50px 50px;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
