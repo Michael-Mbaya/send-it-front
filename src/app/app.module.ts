@@ -8,7 +8,11 @@ import { SigninComponent } from './signin/signin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NavComponent } from './nav/nav.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { DeliveryComponent } from './delivery/delivery.component';
+import { from } from 'rxjs';
+import { HomeComponent } from './home/home.component';
+import { DeliveryApiService } from './delivery-api.service';
 
 @NgModule({
   declarations: [
@@ -17,13 +21,16 @@ import { AboutUsComponent } from './about-us/about-us.component';
     SigninComponent,
     NotFoundComponent,
     NavComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    DeliveryComponent,
+    HomeComponent,
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+   BrowserModule,
+   HttpClientModule,
+   AppRoutingModule
   ],
-  providers: [],
+  providers: [DeliveryApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
