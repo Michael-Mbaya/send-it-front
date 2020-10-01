@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "SEND-IT"
+    }
+  },
+  "defaultProject": "SEND-IT",
+  "cli": {
+    "analytics": "0b63b2e6-0d16-4e93-8d93-baa225410545"
+  }
 }
