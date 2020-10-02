@@ -12,7 +12,7 @@ export class DeliveryApiService {
   delivery: Deliveries
 
   constructor(public http:HttpClient) { 
-    this.delivery = new Deliveries(0,'',0,0,'');
+    this.delivery = new Deliveries(1,"hh",1,1,"h",new Date(2020,09,12),new Date(2020,09,30));
   }
 
   searchUsers(){
@@ -23,6 +23,8 @@ export class DeliveryApiService {
     quantity: number;
     price:number;
     destination:String;
+    dispatch_time:Date,
+    delivery_time:Date
     } 
     let searchPoint = "https://sendit-shembaya-api.herokuapp.com/deliveries"
 
