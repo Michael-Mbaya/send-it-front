@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Deliveries } from './deliveries'
+import { Deliveries } from './deliveries';
+
 
 
 @Injectable({
@@ -12,9 +13,9 @@ export class DeliveryApiService {
   delivery: Deliveries
 
   constructor(public http:HttpClient) { 
-    this.delivery = new Deliveries(1,"hh",1,1,"h",new Date(2020,09,12),new Date(2020,09,30));
+    this.delivery = new Deliveries(1,"hh",1,1,"h",new Date(),new Date());
   }
-
+   
   searchUsers(){
     
     interface ApiResponse {
