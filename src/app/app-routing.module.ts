@@ -23,7 +23,7 @@ const routes: Routes = [
   // // redirect
   // {path: '',redirectTo:"/sign-in",pathMatch:"full"},
 ];
-
+    
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
